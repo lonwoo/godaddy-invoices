@@ -4,9 +4,15 @@ var vo = require('vo');
 var fs = require('fs');
 
 const app = express();
+
 const Nightmare = require('nightmare');		
-const nightmare = Nightmare({ show: process.env.SHOW_WINDOW,  typeInterval: 10,   openDevTools: false });
-nightmare.viewport(1024,768);
+const nightmare = Nightmare({ 
+								show: process.env.SHOW_WINDOW,  
+								typeInterval: 10,   
+								openDevTools: false 
+							});
+
+nightmare.viewport(process.env.WINDOW_WIDTH,process.env.WINDOW_HEIGHT);
 
 var handlebars = require("handlebars");
 var template = handlebars.compile(fs.readFileSync('wrapper.hbs','utf8'));

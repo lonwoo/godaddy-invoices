@@ -1,6 +1,6 @@
 {
   "name": "godaddy-invoices",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Use nightmare to login to GoDaddy, grab all invoice data and render to pretty PDFs",
   "main": "godaddy.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "express": "^4.15.3",
     "handlebars": "^4.0.10",
     "nightmare": "^2.10.0",
-    "vo": "^4.0.2"
+    "vo": "^4.0.2",
+    "xvfb": "^0.2.3"
   },
   "engines": {
     "node": "4.0.0"
