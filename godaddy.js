@@ -12,7 +12,9 @@ const nightmare = Nightmare({
 								openDevTools: false 
 							});
 
-nightmare.viewport(process.env.WINDOW_WIDTH,process.env.WINDOW_HEIGHT);
+var width = parseInt(process.env.WINDOW_WIDTH);
+var height = parseInt(process.env.WINDOW_HEIGHT);
+nightmare.viewport(width,height);
 
 var handlebars = require("handlebars");
 var template = handlebars.compile(fs.readFileSync('wrapper.hbs','utf8'));
